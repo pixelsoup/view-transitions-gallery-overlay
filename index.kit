@@ -8,66 +8,64 @@
     <link rel="stylesheet" href="css/production.css">
   </head>
   <body>
-
-    <aside id="js-overlay" class="overlay">
-      <div id="js-overlay-target" class="overlay__inner"></div>
-    </aside>
-    <div class="pageHeadingWrapper">
-      <h1 class="pageHeading">View Transitions Gallery Overlay</h1>
-      <ul class="pageHeadingList">
-        <li><a class="pageHeadingLink" target="_blank" href="https://www.smashingmagazine.com/2023/12/view-transitions-api-ui-animations-part1/#example-1-crossfade-ui-state-changes" class="link">Smashing Magazine</a></li>
-        <li><a class="pageHeadingLink" target="_blank" href="https://drafts.csswg.org/css-view-transitions-1/#example-3e1ac75e" class="link">W3C CSS View Transitions Module Level 1</a></li>
-      </ul>
-    </div>
-    <main>
-      <figure style="--color: #dfe7fd" onclick="toggleImageView(1)">
-        <div>
-          <img id="js-gallery-image-1" class="gallery__image" src="https://images.unsplash.com/photo-1581260466152-d2c0303e54f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=70" />
+    <main class="main">
+      <div class="container">
+        <aside id="js-overlay" class="overlay">
+          <div id="js-overlay-target" class="overlay__inner"></div>
+        </aside>
+        <div class="pageHeadingWrapper">
+          <h1 class="pageHeading">View Transitions Gallery Overlay</h1>
+          <ul class="pageHeadingList">
+            <li><a class="pageHeadingLink" target="_blank" href="https://www.smashingmagazine.com/2023/12/view-transitions-api-ui-animations-part1/#example-1-crossfade-ui-state-changes" class="link">Smashing Magazine</a></li>
+            <li><a class="pageHeadingLink" target="_blank" href="https://drafts.csswg.org/css-view-transitions-1/#example-3e1ac75e" class="link">W3C CSS View Transitions Module Level 1</a></li>
+          </ul>
         </div>
-        <figcaption>Peyto Lake, Canada</figcaption>
-      </figure>
-
-      <figure style="--color: #f8ad9d" onclick="toggleImageView(2)">
-        <div>
-          <img id="js-gallery-image-2" class="gallery__image" src="https://images.unsplash.com/photo-1573057454928-f6eda06245ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=70" />
+        <div class="galleryWrapper">
+          <figure class="figure" style="--color: #dfe7fd" onclick="toggleImageView(1)">
+            <div class="galleryImageWrapper">
+              <img id="js-gallery-image-1" class="galleryImage" src="https://images.unsplash.com/photo-1581260466152-d2c0303e54f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=70" />
+            </div>
+            <figcaption class="figcaption">Peyto Lake, Canada</figcaption>
+          </figure>
+          <figure class="figure" style="--color: #f8ad9d" onclick="toggleImageView(2)">
+            <div class="galleryImageWrapper">
+              <img id="js-gallery-image-2" class="galleryImage" src="https://images.unsplash.com/photo-1573057454928-f6eda06245ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=70" />
+            </div>
+            <figcaption class="figcaption">Two Jack Lake, Canada</figcaption>
+          </figure>
+          <figure class="figure" style="--color: #d8e2dc" onclick="toggleImageView(3)">
+            <div class="galleryImageWrapper">
+              <img id="js-gallery-image-3" class="galleryImage" src="https://images.unsplash.com/photo-1571369985645-7859660074fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=70" />
+            </div>
+            <figcaption class="figcaption">Crail cottage in Mooroolbark, Australia</figcaption>
+          </figure>
+          <figure class="figure" style="--color: #c1d3fe" onclick="toggleImageView(4)">
+            <div class="galleryImageWrapper">
+              <img id="js-gallery-image-4" class="galleryImage" src="https://images.unsplash.com/photo-1611029238634-0a9f540a94fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=70" />
+            </div>
+            <figcaption class="figcaption">Icefields Parkway, Canada</figcaption>
+          </figure>
+          <figure class="figure" style="--color: #d0f4de" onclick="toggleImageView(5)">
+            <div class="galleryImageWrapper">
+              <img id="js-gallery-image-5" class="galleryImage" src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=70" />
+            </div>
+            <figcaption class="figcaption">Sunlight passing through the tree</figcaption>
+          </figure>
+          <figure class="figure" style="--color: #7bf1a8" onclick="toggleImageView(6)">
+            <div class="galleryImageWrapper">
+              <img id="js-gallery-image-6" class="galleryImage" src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=70" />
+            </div>
+            <figcaption class="figcaption">Bridge over a green waterfall</figcaption>
+          </figure>
         </div>
-        <figcaption>Two Jack Lake, Canada</figcaption>
-      </figure>
-
-      <figure style="--color: #d8e2dc" onclick="toggleImageView(3)">
-        <div>
-          <img id="js-gallery-image-3" class="gallery__image" src="https://images.unsplash.com/photo-1571369985645-7859660074fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=70" />
-        </div>
-        <figcaption>Crail cottage in Mooroolbark, Australia</figcaption>
-      </figure>
-
-      <figure style="--color: #c1d3fe" onclick="toggleImageView(4)">
-        <div>
-          <img id="js-gallery-image-4" class="gallery__image" src="https://images.unsplash.com/photo-1611029238634-0a9f540a94fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=70" />
-        </div>
-        <figcaption>Icefields Parkway, Canada</figcaption>
-      </figure>
-
-      <figure style="--color: #d0f4de" onclick="toggleImageView(5)">
-        <div>
-          <img id="js-gallery-image-5" class="gallery__image" src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=70" />
-        </div>
-        <figcaption>Sunlight passing through the tree</figcaption>
-      </figure>
-
-      <figure style="--color: #7bf1a8" onclick="toggleImageView(6)">
-        <div>
-          <img id="js-gallery-image-6" class="gallery__image" src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=70" />
-        </div>
-        <figcaption>Bridge over a green waterfall</figcaption>
-      </figure>
-    </main>
-    <aside style="display: none" id="js-banner" class="banner">
-      <div class="banner__inner">
-        This browser currently doesn't support View Transitions API. Use Chrome 111 or newer version to view the
-        example.
       </div>
-    </aside>
+      <aside style="display: none" id="js-banner" class="banner">
+        <div class="banner__inner">
+          This browser currently doesn't support View Transitions API. Use Chrome 111 or newer version to view the
+          example.
+        </div>
+      </aside>
+    </main>
     <script src="./js/development.js"></script>
   </body>
 </html>

@@ -1,0 +1,27 @@
+.overlay {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 0%, 0.7);
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  padding-right: 17px;
+  cursor: pointer;
+}
+
+.overlay__inner {
+  padding: 2rem 1rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.overlay:not(.overlay--active) {
+  display: none;
+}
+
+.overlay .galleryImage {
+  margin: 0 auto;
+  max-height: calc(100vh - 4rem);
+}
