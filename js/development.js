@@ -5,23 +5,33 @@ const overlayContent = document.getElementById("js-overlay-target");
 function toggleImageView(index) {
   const image = document.getElementById(`js-gallery-image-${index}`);
 
+  // Apply a CSS class which contains the view-transition-name before animation starts
+  image.classList.add("gallery__image--active");
+
   const imageParentElement = image.parentElement;
 
   if (!document.startViewTransition) {
-    // Fallback if View Transitions API is not supported
     moveImageToModal(image);
   } else {
-    // Start transition with the View Transitions API
     document.startViewTransition(() => moveImageToModal(image));
   }
 
-  overlayWrapper.onclick = function () {
+  // This is now an async function
+  overlayWrapper.onclick = async function () {
     if (!document.startViewTransition) {
       moveImageToGrid(imageParentElement);
       return;
     }
 
-    document.startViewTransition(() => moveImageToGrid(imageParentElement));
+    const transition = document.startViewTransition(() =>
+      moveImageToGrid(imageParentElement)
+    );
+
+    // Wait for animation to complete
+    await transition.finished;
+
+    // Remove the class which contains the page-transition-tag after animation ends
+    image.classList.remove("gallery__image--active");
   };
 }
 
