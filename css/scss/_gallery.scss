@@ -1,8 +1,8 @@
-.gallery__image--active {
+.galleryImageActive {
   view-transition-name: active-image;
 }
 
-.gallery__image {
+.galleryImage {
   object-fit: cover;
   object-position: 50% 50%;
   aspect-ratio: 1;
