@@ -1,4 +1,4 @@
-.overlay {
+.overlayWrapper {
   position: fixed;
   display: flex;
   align-items: center;
@@ -11,17 +11,17 @@
   cursor: pointer;
 }
 
-.overlay__inner {
+.overlayTarget {
   padding: 2rem 1rem;
   max-width: 1280px;
   margin: 0 auto;
 }
 
-.overlay:not(.overlay--active) {
+.overlayWrapper:not(.overlayWrapperActive) {
   display: none;
 }
 
-.overlay .galleryImage {
+.overlayWrapper .galleryImage {
   margin: 0 auto;
   max-height: calc(100vh - 4rem);
 }

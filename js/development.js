@@ -1,6 +1,6 @@
 // Select static & shared page elements
-const overlayWrapper = document.getElementById("js-overlay");
-const overlayContent = document.getElementById("js-overlay-target");
+const overlayWrapper = document.getElementById("js-overlayWrapper");
+const overlayContent = document.getElementById("js-overlayTarget");
 
 function toggleImageView(index) {
   const image = document.getElementById(`js-gallery-image-${index}`);
@@ -32,11 +32,11 @@ function toggleImageView(index) {
 
 // Helper functions for moving the image around and toggling the overlay
 function moveImageToModal(image) {
-  overlayWrapper.classList.add("overlay--active");
+  overlayWrapper.classList.add("overlayWrapperActive");
   overlayContent.append(image);
 }
 
 function moveImageToGrid(imageParentElement) {
   imageParentElement.append(overlayContent.querySelector("img"));
-  overlayWrapper.classList.remove("overlay--active");
+  overlayWrapper.classList.remove("overlayWrapperActive");
 }
