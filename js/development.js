@@ -3,15 +3,15 @@ const overlayWrapper = document.getElementById("js-overlayWrapper");
 const overlayContent = document.getElementById("js-overlayTarget");
 
 function toggleImageView(index) {
-  const image = document.getElementById(`js-gallery-image-${index}`);
+  const galleryImage = document.getElementById(`js-gallery-image-${index}`);
   // Apply a CSS class which contains the view-transition-name before animation starts
-  image.classList.add("galleryImageActive");
-  const imageParentElement = image.parentElement;
+  galleryImage.classList.add("galleryImageActive");
+  const imageParentElement = galleryImage.parentElement;
 
   if (!document.startViewTransition) {
-    moveImageToModal(image);
+    moveImageToModal(galleryImage);
   } else {
-    document.startViewTransition(() => moveImageToModal(image));
+    document.startViewTransition(() => moveImageToModal(galleryImage));
   }
 
   // This is now an async function
@@ -26,17 +26,17 @@ function toggleImageView(index) {
     // Wait for animation to complete
     await transition.finished;
     // Remove the class which contains the page-transition-tag after animation ends
-    image.classList.remove("galleryImageActive");
+    galleryImage.classList.remove("galleryImageActive");
   };
 }
 
 // Helper functions for moving the image around and toggling the overlay
-function moveImageToModal(image) {
+function moveImageToModal(element) {
   overlayWrapper.classList.add("overlayWrapperActive");
-  overlayContent.append(image);
+  overlayContent.append(element);
 }
 
 function moveImageToGrid(imageParentElement) {
-  imageParentElement.append(overlayContent.querySelector("img"));
+  imageParentElement.append(overlayContent.querySelector(".galleryImage"));
   overlayWrapper.classList.remove("overlayWrapperActive");
 }
